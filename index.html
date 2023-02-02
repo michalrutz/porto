@@ -1,51 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Michal Rucinski, frontend developer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <script defer src="index.js"></script>
     <div id="wrapper">
-        <header>
-            <div class="container">
-            <h1>Hi, my name is Michał Ruciński. I'm a frontend developer.</h1>
+      <header>
+        <div class="container">
+          <h1>Hi, my name is Michał Ruciński. I'm a frontend developer.</h1>
+          <button class="btn1" type="button" onclick="smoothScroll(document.getElementById('about'))">read more</button>
+        </div>
+      </header>
+      <main id="about">
+        <div class="container double">
+          <div class="half">
+            <h2 class="title">about me</h2>
+            <p class="discription">
+              Web developer, graphic designer, artist, and art and technology
+              enthusiast. Web developer, graphic designer, artist, and art and technology
+              enthusiast.
+            </p>
+          </div>
+          <div id="skills" class="half">
+            <h2>expertise</h2>
+            <div id="skillsBox">
+              <h3>coding</h3>
+              <div class="list">
+                <tag>Html</tag><tag>CSS</tag><tag>JavaScript</tag><tag>React</tag><tag>GitHub</tag>
+              </div>
+              <hr />
+              <h3>design</h3>
+              <div class="list">
+                <tag>Figma</tag><tag>Photoshop</tag><tag>Illustrator</tag><tag>InDesign</tag>
+              </div>
+              <hr />
+              <h3>soft skills</h3>
+              <div class="list">
+                <tag>empathy</tag><tag>analitical thinking</tag><tag>creativity</tag>
+              </div>
             </div>
-        </header>
-        <main>
-            <div class="container">
-                <h2 class="title">About</h2>
-                <p>Twenty years after modern civilization has been destroyed, Joel, a hardened survivor, is hired to smuggle Ellie, a 14-year-old girl, out of an oppressive quarantine zone. What starts as a small job soon becomes a brutal, heartbreaking journey, as they both must traverse the United States and depend on each other for survival.
-                </p>
-            </div> 
-        </main>
-        <section id="Project1">
-             <div class="container">
-                <h2 class="title">TV Show Advisor</h2>
-                <p>tools used: HTML, CSS, JavaScript, React</p>
-                <p>Twenty year has been destroyed, Joe. el, a hardened survivor, is hired to smuggle Ellie.
-                </p>
-            </div>
-            <div class="container">
-                <h2 class="title">Memory Game</h2>
-                <p>tools used: HTML, CSS, JavaScript, React</p>
-                <p>
-                    advance algorrithms
-                </p>
-            </div>
-        </section>
-        <footer>
-            linkedIn
-            github
-        </footer>
+          </div>
+          <button class="btn1" id="left" type="button" onclick="smoothScroll(document.getElementById('Projects'))">projects</button>
+
+        </div>
+      </main>
+      <section id="Projects">
+        <div class="container">
+          <h2>Projects</h2>
+          <div class="singleProject">
+            <h3 class="title">TV Show Advisor</h3>
+            <button
+              class="btn1"
+              type="button"
+              href="https://tv-show-adviser-two.vercel.app/"
+            >
+              → Check
+            </button>
+            <p class="shortDiscription">CSS, JavaScript, React</p>
+            <p>fetching API react hooks like useState and useEffect</p>
+          </div>
+          <a class="container" href="https://memo-game-six.vercel.app/">
+            <h3 class="title">Memory Game</h3>
+            <p>tools used: <strong>CSS, JavaScript, React</strong></p>
+            <p>advanced algorrithms react hooks</p>
+          </a>
+        </div>
+      </section>
+      <footer>
+        <div class="container">
+          <a href="https://www.linkedin.com/in/michal-rucinski-vienna/"
+            >linkedIn</a
+          >
+          <a href="https://github.com/michalrutz">github</a>
+        </div>
+      </footer>
     </div>
-</body>
+  </body>
 </html>
