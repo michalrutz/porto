@@ -61,7 +61,7 @@ header, main, section, footer {
     position: relative;
     top: -2rem;
     box-sizing: border-box;
-    background: linear-gradient(90deg, rgba(21, 0, 255, 0.0) 40%, rgba(0, 0, 255, 0.5) 100%), url("trans.png"), rgba(0, 0, 255, 0.7);
+    background: linear-gradient(90deg, rgba(21, 0, 255, 0.0) 50%, rgba(0, 0, 255, 0.5) 100%), url("trans.png"), rgba(0, 0, 255, 0.7);
     background-repeat: no-repeat;
     filter: grayscale(10%);
     background-position: top right;
@@ -72,12 +72,13 @@ header, main, section, footer {
     max-width: 700px;
     border: 2px solid rgba(0, 0, 0, 0.5);
     border-radius: 0.5rem;
-    filter: saturate(0.8);
-    transition: filter 1s ease-in-out;
+    filter: saturate(0.85);
+    transition: border-color 1s, filter 1s ease-in-out;
 }
 .double:hover{
     filter: saturate(1.2);
-    transition: filter 0.5s ease-in-out;
+    border-color: rgba(255, 255, 255, 0.8);
+    transition: border-color 1s, filter 0.5s ease-in-out;
 }
 .half{
     box-sizing: border-box;
@@ -206,9 +207,9 @@ main {
 }
 
 #Projects{
-    background: linear-gradient(90deg, rgba(21, 0, 255, 0.6) 0%, rgba(0, 0, 255, 0.8) 100%), url("coding.avif") ;
+    background: linear-gradient(90deg, rgba(255, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.9) 100%), url("coding.avif") ;
+    background:darkblue;
     background-size: cover;
-    opacity: 0.85;
     min-height: 100vh;
     justify-content: flex-start;
     align-items: center;
@@ -220,7 +221,7 @@ main {
 #projectsBox{
     padding: 0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: stretch;
     flex-wrap: wrap;
@@ -229,25 +230,55 @@ main {
 }
 
 .singleProject{
-    opacity: 1;
-    background-color: blue;
-    border: 2px solid white;
+    background-color: rgba(0, 0, 255, 1);
+    border: 2px solid black;
     border-radius: 0.5rem;
     width: 30%;
-    min-width: 350px;
+    max-width: 700px;
+    min-width: 300px;
     margin-bottom: 1rem;
     box-sizing: border-box;
+    box-shadow: 10px 10px black;
 }
 .singleProject * {
     padding: 0.5rem 1rem;
 }
+.SPandPView{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.view {
+    align-self: flex-start;
+    box-shadow: 10px 10px yellow;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    max-width: 100vw;
+}
+#view2{
+    flex-direction: row-reverse;
+}
+.projectView{
+    align-content: center;
+    width: 700px;
+    max-width: 100vw;
+    background: url("tv_small.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
 .title{
     border-radius: 0.2rem 0.2rem 0 0;
-    border-bottom: 2px solid rgba(255, 255, 255);
+    border-bottom: 2px solid black;
 
 }
 .singleProject .title:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 0, 0, 0.2);
+}
+@media screen and (max-width: 1100px) {
+    .singleProject{
+        width: 100%;
+    } 
 }
 
 @media screen and (max-width: 600px) {
@@ -325,6 +356,7 @@ main {
         margin: 0;
         padding: 0 0 2rem;
     }
+   
   }
 
 footer {
