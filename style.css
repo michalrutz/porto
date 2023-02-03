@@ -74,6 +74,7 @@ header, main, section, footer {
     border-radius: 0.5rem;
     filter: saturate(0.85);
     transition: border-color 1s, filter 1s ease-in-out;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.4);
 }
 .double:hover{
     filter: saturate(1.2);
@@ -238,7 +239,7 @@ main {
     min-width: 300px;
     margin-bottom: 1rem;
     box-sizing: border-box;
-    box-shadow: 10px 10px black;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
 }
 .singleProject * {
     padding: 0.5rem 1rem;
@@ -282,6 +283,9 @@ main {
 }
 
 @media screen and (max-width: 600px) {
+    #wrapper * {
+        box-shadow:none;
+    }
     #wrapperHeaderMain{
         background: linear-gradient(-75deg, rgba(255, 0, 0, 0.8) 15%, darkblue 35%, blue 80%);
         background-size: 500% 500%;
