@@ -20,6 +20,13 @@ body {
     flex-direction: column;
     align-items: center;
 }
+#wrapperHeaderMain{
+    width: 100%;
+    max-width: 144rem;
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+}
 @keyframes puls {
     0% {
         background-position: 0% 50%;
@@ -65,6 +72,12 @@ header, main, section, footer {
     max-width: 700px;
     border: 2px solid rgba(0, 0, 0, 0.5);
     border-radius: 0.5rem;
+    filter: saturate(0.8);
+    transition: filter 1s ease-in-out;
+}
+.double:hover{
+    filter: saturate(1.2);
+    transition: filter 0.5s ease-in-out;
 }
 .half{
     box-sizing: border-box;
@@ -99,7 +112,7 @@ header, main, section, footer {
 }
 
 tag{
-    background-color: rgba(0, 0, 139, 0.7);
+    background-color: rgba(0, 0, 139, 0.8);
     border-radius: 1rem;
     padding: 0.1rem 0.6rem;
     margin-right: 0.2rem;
@@ -119,8 +132,8 @@ h1, h2, h3 {
     padding: 0 0 0 0;
 }
 h1{
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
+    font-family: 'Babylonica', cursive;
+    font-size: 7rem;
     font-weight:400;
 }
 
@@ -142,14 +155,21 @@ a, a:visited, a:active {
 header{
     height: 100vh;
     
+    
 }
 header .container{
     position: relative;
-        top: -2rem;
+        top: -3rem;
+    align-items: center;
+}
+#underName {
+    position: relative;
+        top: -1.6rem;
+    align-items: center;
 }
 main {
     position: relative;
-    padding: 0;
+    padding: 0 0 1rem;
     margin: 0;
     color: white;
     min-height: 100vh;
@@ -186,14 +206,15 @@ main {
 }
 
 #Projects{
-    background-color: darkblue;
+    background: linear-gradient(90deg, rgba(21, 0, 255, 0.6) 0%, rgba(0, 0, 255, 0.8) 100%), url("coding.avif") ;
+    background-size: cover;
+    opacity: 0.85;
     min-height: 100vh;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
-#Projects h1 {
-    padding: 0 0 3rem;
-
+#Projects h2 {
+    padding: 2rem 0 ;
 }
 
 #projectsBox{
@@ -208,6 +229,7 @@ main {
 }
 
 .singleProject{
+    opacity: 1;
     background-color: blue;
     border: 2px solid white;
     border-radius: 0.5rem;
@@ -224,26 +246,49 @@ main {
     border-bottom: 2px solid rgba(255, 255, 255);
 
 }
-.title:hover {
+.singleProject .title:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
 @media screen and (max-width: 600px) {
-    header{
+    #wrapperHeaderMain{
         background: linear-gradient(-75deg, rgba(255, 0, 0, 0.8) 15%, darkblue 35%, blue 80%);
         background-size: 500% 500%;
         animation: puls 8s ease-in-out infinite;
     }
-    h1 {
-        font-size: 2.2rem;
+    header{
+        height: 100vh;
+    }
+    header .container {
+        position: absolute;
+        top:30vh
+    }
+    header h1 {
+        font-family:'Playfair Display', serif;
+        font-size: 4rem;
+        line-height:4rem;
         text-align: center;
     }
+    #underName {
+        position: relative;
+        top:0rem;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    header .btn1 {
+        margin-top: 1rem;
+    }
+
     main {
         justify-content: flex-start;
+        margin-bottom: 0;
+        padding-bottom: 0;
     }
     .double {
+        background: linear-gradient(90deg, rgba(21, 0, 255, 0.0) 40%, rgba(0, 0, 255, 0.4) 100%), url("trans.png"), rgba(0, 0, 255, 0.1);
         border-radius: 0;
-        border: 3px solid black;
+        border: 2px solid white;
+        border-style: solid none none none;
         flex-direction: column;
         background-repeat: no-repeat;
         background-position: top center;
@@ -267,7 +312,7 @@ main {
     }
 
     .discription {
-        background-color: darkblue;
+        background-color: rgba(0, 0, 139, 0.9);
         padding: 0.5rem 1rem;
         box-sizing: border-box;
         border-radius: 0.5rem;
@@ -276,8 +321,9 @@ main {
     #left{
         display: none;
     }
-    #Projects h1 {
-        padding: 2rem 0 2rem;
+    #Projects h2 {
+        margin: 0;
+        padding: 0 0 2rem;
     }
   }
 
