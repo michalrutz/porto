@@ -35,7 +35,7 @@ function gallery(array) {
                     <img style="display:${window.innerWidth>600 ? "none" : "block"}" src="${project.img}" class="thumb"></img>
                     <p class="shortDescription">${project.tools.map( tool => { return '<tag>'+tool+'</tag>'}).join("")}</p>
                     <p>${project.desc}</p>
-                    <button class="singleProject_frame_btn" type="button" onclick="window.location.href='${project.link}';">
+                    <button class="singleProject_frame_btn" type="button" target="_blank" onclick="window.open('${project.link}')" >
                         <img class="eye" src="eye.svg.png" height="20px" width="20px">
                         take a peek
                     </button>
