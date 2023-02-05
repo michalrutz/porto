@@ -284,6 +284,14 @@ main {
     padding: 0.5rem 1rem;
 }
 
+.shortDescription{
+    padding: 1.5rem 0 1.5rem 0;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    margin-top: 0.5rem;
+    border-bottom: 2px solid white ;
+}
+
 .singleProject_frame_btn{
     display: flex;
     flex-direction: row;
@@ -448,13 +456,7 @@ main {
         margin: 0;
         border-bottom: 2px solid white ;
     }
-    .shortDescription{
-        padding: 1.5rem 0 1.5rem 0;
-        margin-top: 0 !important;
-        margin-bottom: 0 !important;
-        margin-top: 0.5rem;
-        border-bottom: 2px solid white ;
-    }
+    
     .singleProject_frame_btn{
         box-shadow: 0rem 0.5rem black !important;
     }
