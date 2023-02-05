@@ -9,7 +9,6 @@ const memoGame = {
     tools: "CSS, JavaScript, React",
     desc: "The cards are placed face down. In rows and columns. A player turns over two cards, one at a time. The object of the game is to collect all pairs as soon as possible <br>The application was created with help of react framework and demonstrates an advanced use of react hooks and JavaScript.",
     img: "./pics/memo_small.png",
-    link:"https://memo-game-six.vercel.app/"
 };
 const SimonGame = {
     title: "the Memory Game",
