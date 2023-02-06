@@ -44,8 +44,8 @@ function gallery(array) {
                 </div>
                 <a style="display:${window.innerWidth<600 ? "none" : "block"}"><img src="${project.img}" class="view"></img></a>
                 <div class="projectGap" >
-                    <button style="display:${i===gallery.length-1 ? "none" : "block"}" class="next btn1" type="button" onclick="smoothScroll(document.getElementById('${(i+1)+"project"}'))">next ↓</button>
-                    <button style="display:${i!==gallery.length-1 ? "none" : "block"}" class="next btn1" type="button" onclick="smoothScroll(document.getElementById('${"about"}'))">back ↑</button>
+                    <button style="display:${i===gallery.length-1 ? "none" : "block"}" class="next" type="button" onclick="smoothScroll(document.getElementById('${(i+1)+"project"}'))">↓</button>
+                    <button style="display:${i!==gallery.length-1 ? "none" : "block"}" class="next" type="button" onclick="smoothScroll(document.getElementById('${"about"}'))">↑</button>
                     </div> 
             </div>
             `
