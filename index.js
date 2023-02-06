@@ -21,6 +21,8 @@ const SimonGame = {
 };
 const projects = [tvAdvisor, memoGame, SimonGame];
 
+window.addEventListener("resize", () =>{ if(window.innerWidth<600 ){console.log(window.innerWidth);} });
+
 //COMPONENTS
 function gallery(array) {
     let gallery = [...array];
@@ -50,7 +52,6 @@ function gallery(array) {
         )
     }
     list.unshift(`<h2>PROJECTS</h2>`)
-    console.log(window.innerWidth);
     return list
 }
     

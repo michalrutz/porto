@@ -313,10 +313,18 @@ main {
     box-shadow: 0.5rem 0.5rem black;
     transition: background-color 1s ease-in-out;
 }
+.eye{
+    transform: scale(1, 0);
+    transition: filter 1s, transform 0.5s ease-in-out;
+
+}
+
+
 .singleProject_frame_btn:hover .eye{
+    transform: scale(1, 1);
     filter: invert(0.5) sepia(1) saturate(5);
 
-    transition: filter 0.5s ease-in-out;
+    transition: filter 1s, transform 0.5s ease-in-out;
 }
 
 .view {
